@@ -1,3 +1,4 @@
+<meta charset="utf-8"/>
 <script src="../GoogleBooks.js"></script>
 <script src="../../lib/jquery-2.1.1.min.js"></script>
 <link rel="stylesheet" href="../../lib/bootstrap.min.css">
@@ -6,34 +7,40 @@
 
 <html>	
 	<style type="text/css">
+	body{
+		background-color:azure
+	}
+	.book{
+		color:blue
 		
+	}
 	</style>
-	<body>
+	<body class="container">
 		<div>
 			<div>
-				<h1>Google Books</h1>
+				<h1 class="text-lg-left">Google Books</h1>
 			</div>
-			<div>
-				<input id="searchText" placeholder="Search" />
+			<div class = "col-lg-8">
+				<input id="searchText" class="form-control" placeholder="Search" />
 			</div>
-			<div>
-				<button id="searchButton" type="button">
+			<div class = "col-lg-12">
+				<button id="searchButton" type="button" class="btn btn-primary">
 					<i class="fa fa-search"></i> Search 
 				</button>
 			</div>
-			<div id="navigation">
-				<button id="previous"> Previous </button>
-				<button id="next"> Next </button>
+			<div id="navigation" class="col-lg-8">
+				<button id="previous" class="btn btn-warning"> Previous </button>
+				<button id="next" class="btn btn-warning"> Next </button>
 				<span>Page: <select id="pageNumber"></select></span>
 			</div>
-			<div id="searchResults">
+			<div id="searchResults" class="col-lg-8">
 			</div>
 		</div>
 	</body>	
 	<script type="text/javascript">
 		$( document ).ready(
 			function() {
-				GoogleBooks.init();		
+				GoogleBooks.init();	
     	});
 	</script>
 </html>
